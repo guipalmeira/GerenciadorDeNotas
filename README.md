@@ -1,26 +1,16 @@
-# GerenciadorDeNotas
+# 📚 Sistema de Notas para Professores
 
-Um sistema simples em Python para cadastro e gerenciamento de notas de alunos, voltado para uso por professores.  
-Permite o login de usuários, cadastro de novos professores, registro e consulta de notas, além de funcionalidades de atualização e remoção de dados.
+Este é um projeto em Python que simula um sistema simples de gerenciamento de notas de alunos, voltado para professores. O objetivo é permitir o cadastro, consulta, atualização e remoção de notas de forma prática via terminal.
 
-## 🚀 Funcionalidades
+## 🧠 Funcionalidades
 
-- Login de professores
-- Cadastro de novos professores com senha
-- Registro de notas por aluno
-- Cálculo automático da média final
-- Consulta individual de alunos
-- Remoção de registros (em desenvolvimento)
-- Atualização de registros (em desenvolvimento)
+- 🔐 Login e cadastro de professores
+- 👨‍🏫 Cadastro de alunos e suas notas
+- 📖 Consulta das notas de um aluno
+- ✏️ Atualização das notas de um aluno
+- ❌ Remoção de notas de um aluno
+- 🎯 Cálculo automático da média final
 
-## 🛠️ Tecnologias
+---
 
-- Python 3
-- Estrutura de dados com listas e dicionários
-- Lógica condicional e laços
-- Organização modular por funções
-
-python notafacil.py
-
-
-Desenvolvido por Guilherme Palmeira Camargo como projeto de prática em Python e controle de dados acadêmicos.
+python sistema_notas.py
