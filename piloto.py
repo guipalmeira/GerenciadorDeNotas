@@ -126,6 +126,17 @@ def atualizar_notas():
 
 def remover_notas():
     print("Em processo")
+    print("Bem vindo a Tela de Remoção de notas")
+    aluno_nome = input("Digite o nome do Aluno que deseja remover as notas: ")
+
+    for i, nota in enumerate(notas):
+        if nota['nome'] == aluno_nome:
+            print(f"Aluno encontrado: {nota["nome"].title()}")
+            confirmacao = input("Deseja remover as notas do Aluno: s/n")
+            if confirmacao == 's':
+                print(f"Aluno {nota['nome'].title()} removido com sucesso.")
+            else:
+                print("Remoção do aluno e das notas canceladas.")
 
 
 acesso()
