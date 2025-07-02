@@ -121,23 +121,49 @@ def consultar_notas():
         print("Nenhum aluno com esse nome encontrados")
 
 def atualizar_notas():
-    print("Em processo")
+    print("=== Atualizar Notas ===")
+    nome_doaluno = input("Digite o nome do aluno que deseja atualizar: ").strip().lower()
+
+    for nota in notas:
+        if nota["nome"] == nome_doaluno:
+            print("Produto encontrado!")
+            try:
+                nova_nota1 = int(input("Digite a primeira nota nova: \n"))
+                nova_nota2 = int(input("Digite a segunda nota nova: \n"))
+                nova_nota3 = int(input("Digite a tericera nota nova: \n"))
+                nova_nota4 = int(input("Digite a quarta nota nova: "))
+
+                nota["nota1"] = nova_nota1
+                nota["nota2"] = nova_nota2
+                nota["nota3"] = nova_nota3
+                nota["nota4"] = nova_nota4
+                nota["media"] = (nova_nota1 + nova_nota2 + nova_nota3 + nova_nota4) / 4
+
+
+                print("Produto atualizado com sucesso!")
+                return
+            except ValueError:
+                print("Quantidade e valor precisam ser números válidos!")
+                return
+
 
 
 def remover_notas():
-    print("Em processo")
-    print("Bem vindo a Tela de Remoção de notas")
-    aluno_nome = input("Digite o nome do Aluno que deseja remover as notas: ")
+    print("Bem vindo à Tela de Remoção de Notas")
+    aluno_nome = input("Digite o nome do Aluno que deseja remover as notas: ").strip().lower()
 
     for i, nota in enumerate(notas):
         if nota['nome'] == aluno_nome:
-            print(f"Aluno encontrado: {nota["nome"].title()}")
-            confirmacao = input("Deseja remover as notas do Aluno: s/n")
+            print(f"Aluno encontrado: {nota['nome'].title()}")
+            confirmacao = input("Deseja remover as notas do aluno? (s/n): ").strip().lower()
             if confirmacao == 's':
-                print(f"Aluno {nota['nome'].title()} removido com sucesso.")
+                del notas[i]
+                print(f"Notas do aluno {nota['nome'].title()} removidas com sucesso.")
+                return
             else:
-                print("Remoção do aluno e das notas canceladas.")
-
+                print("Remoção cancelada.")
+                return
+    print("Aluno não encontrado.")
 
 acesso()
 
