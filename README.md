@@ -36,6 +36,6 @@ usuarios → Dicionário com usuários e senhas
 
 👨‍💻 Autor
 - Desenvolvido por Guilherme Camargo, estudante de Engenharia de Software em transição de carreira para a área de tecnologia.
-🔗 LinkedIn
+
 
 python sistema_notas.py
